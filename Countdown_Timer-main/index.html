@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer | Javascript Projrct</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>New Year Countdown</h1>
+        </div>
+        <div class="container">
+            <div>
+                <p id="days"></p>
+                <p>days</p>
+            </div>
+            <div>
+                <p id="hours"></p>
+                <p>hours</p>
+            </div>
+            <div>
+                <p id="mins"></p>
+                <p>minutes</p>
+            </div>
+            <div>
+                <p id="secs"></p>
+                <p>seconds</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tillDate = new Date("Jan 1, 2024 00:00:00").getTime();
+        function countdown(){
+            var nowDate = new Date().getTime();
+            var timeLeft = tillDate - nowDate;
+            var numDays = Math.floor(timeLeft / (1000 * 60 * 60 *24));
+            var numHours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+            var numMins = Math.floor((timeLeft / ( 1000 * 60)) % 60);
+            var numSecs = Math.floor((timeLeft / 1000) % 60);
+
+            document.getElementById("days").innerHTML = numDays;
+            document.getElementById("hours").innerHTML = numHours;
+            document.getElementById("mins").innerHTML = numMins;
+            document.getElementById("secs").innerHTML = numSecs;
+        }
+        var x = setInterval(countdown, 1000);
+    </script>
+</body>
+
+</html>

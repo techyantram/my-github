@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.allkpop.com/upload/2023/06/content/171249/web_data/allkpop_1687020614_collage.jpg');
+}
+.main{
+    text-align: center;
+    margin: 250px auto;
+}
+.main h1{
+    font-size: 60px;
+    font-family: sans-serif;
+}
+.container{
+    width: 30%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+p{
+    font-size: 25px;
+}
+#days, #hours, #mins, #secs{
+    font-size: 30px;
+}
